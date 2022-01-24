@@ -17,7 +17,7 @@ spec:
     helm:
       releaseName: dev
       version: v3
-      valuesFile:
+      valueFiles:
         - config/env/tennant-1/dev.yaml
   syncPolicy:
     syncOptions:
