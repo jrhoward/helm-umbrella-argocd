@@ -1,0 +1,11 @@
+# Default values for argo-workflow.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+
+serviceAccount:
+  create: false
+argo-workflows:
+  enabled: false
+  init:
+    serviceAccount: argo-init

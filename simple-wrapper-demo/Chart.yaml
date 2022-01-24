@@ -1,0 +1,13 @@
+apiVersion: v2
+name: simple-wrapper-demo
+description: An umbrella chart that wraps argoworkflow
+type: application
+
+version: 1.0.0
+
+appVersion: "1.0.0"
+dependencies:
+- name: argo-workflows
+  version: "0.9.5"
+  repository: https://argoproj.github.io/argo-helm
+  condition: argocd.enabled

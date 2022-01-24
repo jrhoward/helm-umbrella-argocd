@@ -1,0 +1,6 @@
+serviceAccount:
+  create: true
+argo-workflows:
+  enabled: true
+  controller:
+    containerRuntimeExecutor: k8sapi
