@@ -8,7 +8,7 @@ version: 1.0.0
 appVersion: "1.0.0"
 dependencies:
 - name: argo-workflows
-  alias: argoWorkflows
+  alias: argoworkflows
   version: "0.9.5"
   repository: https://argoproj.github.io/argo-helm
   condition: argocd.enabled
