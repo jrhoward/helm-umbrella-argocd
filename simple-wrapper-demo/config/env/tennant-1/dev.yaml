@@ -3,6 +3,7 @@ serviceAccount:
 argoworkflows:
   enabled: true
   controller:
-    containerRuntimeExecutor: pns
+    containerRuntimeExecutor: k8sapi
+    #containerRuntimeExecutor: pns
     workflowNamespaces:
        - dev
