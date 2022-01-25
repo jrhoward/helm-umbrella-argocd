@@ -11,7 +11,7 @@ spec:
     namespace: test
   project: "default"
   source:
-    repoURL: https://github.com/jrhoward/helm-umbrella-argocd/simple-wrapper-demo/
+    repoURL: https://github.com/jrhoward/helm-umbrella-argocd.git/simple-wrapper-demo/
     chart: simple-wrapper-demo
     targetRevision: HEAD
     helm:
