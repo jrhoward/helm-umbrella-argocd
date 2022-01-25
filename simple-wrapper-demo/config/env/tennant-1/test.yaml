@@ -4,3 +4,5 @@ argoworkflows:
   enabled: true
   controller:
     containerRuntimeExecutor: k8sapi
+    workflowNamespaces:
+       - test
