@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: argoworkflowset
+  namespace: argo-cd
+spec:
+  generators:
+  - list:
+      elements:
+      - releaseName: dev
+        namespace: dev
+        server: https://kubernetes.default.svc
+        tennant: tennant-1
+      - releaseName: test
+        namespace: test
+        server: https://kubernetes.default.svc
+        tennant: tennant-1
+  template:
+    metadata:
+      name:  "argo-workflow-{{releaseName}}"
+      namespace: argo-cd
+    spec:
+      destination:
+        server: "{{server}}"
+        namespace: "{{namespace}}"
+      project: "default"
+      source:
+        repoURL: https://github.com/jrhoward/helm-umbrella-argocd.git
+        path: simple-wrapper-demo
+        targetRevision: "HEAD"
+        helm:
+          releaseName: "{{releaseName}}"
+          version: v3
+          valueFiles:
+            - "config/env/{{tennant}}/{{namespace}}.yaml"
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
