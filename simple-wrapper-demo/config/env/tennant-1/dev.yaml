@@ -1,6 +1,6 @@
 serviceAccount:
   create: true
-argo-workflows:
+argoWorkflows:
   enabled: true
   controller:
     containerRuntimeExecutor: pns
