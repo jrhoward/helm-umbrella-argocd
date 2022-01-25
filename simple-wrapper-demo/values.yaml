@@ -7,5 +7,6 @@ serviceAccount:
   create: false
 argoworkflows:
   enabled: false
+  singleNamespace: true
   init:
     serviceAccount: argo-init
