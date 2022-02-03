@@ -1,8 +1,5 @@
 serviceAccount:
   create: true
-argoworkflows:
+nginx:
   enabled: true
-  controller:
-    containerRuntimeExecutor: k8sapi
-    workflowNamespaces:
-       - test
+  replicaCount: 2

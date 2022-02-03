@@ -1,9 +1,5 @@
+---
 serviceAccount:
-  create: true
-argoworkflows:
+  create: false
+nginx:
   enabled: true
-  controller:
-    containerRuntimeExecutor: k8sapi
-    #containerRuntimeExecutor: pns
-    workflowNamespaces:
-       - dev
