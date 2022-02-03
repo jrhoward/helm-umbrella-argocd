@@ -26,7 +26,7 @@ spec:
       project: "default"
       source:
         repoURL: https://github.com/jrhoward/helm-umbrella-argocd.git
-        path: simple-wrapper-demo
+        path: simple-wrapper-demo/
         targetRevision: "HEAD"
         helm:
           releaseName: "{{releaseName}}"
