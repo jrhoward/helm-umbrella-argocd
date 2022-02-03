@@ -15,6 +15,10 @@ spec:
         namespace: test
         server: https://kubernetes.default.svc
         tennant: tennant-1
+      - releaseName: uat
+        namespace: uat
+        server: https://kubernetes.default.svc
+        tennant: tennant-1
   template:
     metadata:
       name:  "argo-workflow-{{releaseName}}"
