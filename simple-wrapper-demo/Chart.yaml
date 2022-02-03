@@ -10,4 +10,4 @@ dependencies:
 - name: nginx
   version: "9.7.*"
   repository: https://charts.bitnami.com/bitnami
-  condition: nginx.enabled
+  condition: "true"
