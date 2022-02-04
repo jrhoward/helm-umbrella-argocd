@@ -21,7 +21,7 @@ spec:
         tennant: tennant-1
   template:
     metadata:
-      name:  "argo-workflow-{{releaseName}}"
+      name:  "nginx-{{releaseName}}"
       namespace: argo-cd
     spec:
       destination:
