@@ -3,3 +3,5 @@ serviceAccount:
   create: false
 nginx:
   enabled: false
+  service:
+    type: ClusterIP
