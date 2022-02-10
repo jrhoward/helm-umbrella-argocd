@@ -14,10 +14,11 @@ nginx:
     extraPaths: []
     extraTls: []
     secrets: []
-  serverBlock: |-
-    server {
-      listen 0.0.0.0:8080;
-      location / {
-        return 200 "hello!";
-      }
-    }
+#   serverBlock: |-
+#     server {
+#       listen 80;
+#       server_name www.example.com example.com;
+#       location /blog {
+#          proxy_pass http://node1.com:8000/wordpress/;
+#       }
+#     }
