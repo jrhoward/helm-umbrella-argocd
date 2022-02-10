@@ -14,3 +14,10 @@ nginx:
     extraPaths: []
     extraTls: []
     secrets: []
+  serverBlock: |-
+    server {
+      listen 0.0.0.0:8080;
+      location / {
+        return 200 "hello!";
+      }
+    }
