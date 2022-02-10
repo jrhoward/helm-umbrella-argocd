@@ -5,3 +5,12 @@ nginx:
   enabled: false
   service:
     type: ClusterIP
+  ingress:
+    enabled: false
+    hostname: ''
+    path: '/*'
+    annotations: {}
+    extraHosts: []
+    extraPaths: []
+    extraTls: []
+    secrets: []
