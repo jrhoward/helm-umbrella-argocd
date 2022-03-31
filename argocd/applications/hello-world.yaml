@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name:  "helloworld"
+spec:
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
+  project: "default"
+  source:
+    chart: ??
+    repoURL: ??
+    targetRevision: ""
+    helm:
+      releaseName: dev
+      version: v3
+      valueFiles:
+        - config/env/tennant-1/dev.yaml
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
