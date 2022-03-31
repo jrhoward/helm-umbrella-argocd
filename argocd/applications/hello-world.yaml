@@ -3,19 +3,21 @@ kind: Application
 metadata:
   name:  "helloworld"
 spec:
+  # which cluster to deploy chart to
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
   project: "default"
+  # chart to deploy
   source:
-    chart: ??
-    repoURL: ??
-    targetRevision: ""
+    chart: nginx
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: "9.7.*"
     helm:
-      releaseName: dev
+      releaseName: helloNginx
       version: v3
-      valueFiles:
-        - config/env/tennant-1/dev.yaml
+      values: |
+          
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
