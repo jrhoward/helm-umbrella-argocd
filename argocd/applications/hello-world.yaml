@@ -17,7 +17,12 @@ spec:
       releaseName: helloNginx
       version: v3
       values: |
-          
+        service:
+          type: ClusterIP
+        ingress:
+          enabled: false
+          hostname: ''
+          path: '/*'
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
